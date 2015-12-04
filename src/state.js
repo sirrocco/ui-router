@@ -1231,7 +1231,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * - **`relative`** - {string|object} -  If `stateOrName` is a relative state name and `options.relative` is set, .is will
      * test relative to `options.relative` state (or name).
      *
-     * @returns {boolean} Returns true if it is the state.
+     * @returns {boolean} Returns true if it is the state, false if it's a different state, undefined if `stateOrName` is not a known state.
      */
     $state.is = function is(stateOrName, params, options) {
       options = extend({ relative: $state.$current }, options || {});
